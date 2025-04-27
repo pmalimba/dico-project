@@ -1,14 +1,18 @@
 import React from "react";
-import tulips from "./tulips.png";
+import Dictionary from "./Dictionary";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        hello
-        <img src={tulips} alt="tulips" />
-      </header>
+    <div className="container">
+      <div className="App">
+        <main>
+          <Dictionary />
+          <footer className="App-footer">
+            <small>Coded by Paula Malimba</small>
+          </footer>
+        </main>
+      </div>
     </div>
   );
 }
