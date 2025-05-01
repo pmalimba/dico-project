@@ -9,7 +9,14 @@ function App() {
         <main>
           <Dictionary />
           <footer className="App-footer">
-            <small>Coded by Paula Malimba</small>
+            <small>
+              This project was coded by Paula Malimba, and is{" "}
+              <a href="https://github.com/pmalimba/dictionary-project">
+                open-sourced on GitHub
+              </a>
+              , and is{" "}
+              <a href="https://dico-project.netlify.app/">hosted on Netlify</a>
+            </small>
           </footer>
         </main>
       </div>
