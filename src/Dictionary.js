@@ -14,21 +14,20 @@ export default function Dictionary() {
   function search(event) {
     event.preventDefault();
     let apiKey = "51035d71b84ac5cet75eof3fb55a84d0";
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}}&key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
-
-    return (
-      <div className="Dictionary">
-        <form onSubmit={search}>
-          <input type="search" onChange={handleKeywordChange} />
-        </form>
-        <Results results={results} />
-      </div>
-    );
   }
+  return (
+    <div className="Dictionary">
+      <form onSubmit={search}>
+        <input type="search" onChange={handleKeywordChange} />
+      </form>
+      <Results results={results} />
+    </div>
+  );
 }
